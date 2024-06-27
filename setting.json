@@ -1,0 +1,129 @@
+{
+  "workbench.startupEditor": "none",
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "material-icon-theme",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.filePath": "off",
+  "editor.tabCompletion": "off",
+  "editor.lineNumbers": "relative",
+  "editor.fontFamily": "jetBrains Mono",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.wordWrapColumn": 90,
+  "editor.wordWrap": "bounded",
+  "editor.fontSize": 11.5,
+  "editor.letterSpacing": 0.2,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.lineHeight": 1.5,
+  "editor.fontWeight": 400,
+  "editor.fontLigatures": false,
+  "terminal.integrated.fontFamily": "jetBrains Mono",
+  "terminal.integrated.fontSize": 12.5,
+  "terminal.integrated.fontWeight": 400,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "emojisense.languages": {
+    "javascript": true,
+    "markdown": true,
+    "plaintext": {
+      "markupCompletionsEnabled": false,
+      "emojiDecoratorsEnabled": false
+    },
+    "scminput": true,
+    "git-commit": true
+  },
+
+  // javscript
+  "javascript.suggest.completeFunctionCalls": true,
+  "prettier.singleQuote": true,
+
+  // explorer exlude file
+
+  // extension material icon
+  "material-icon-theme.folders.associations": {
+    "learn": "Interface",
+    "case": "Custom",
+    "practice": "Json",
+    "study-case": "Tasks",
+    "abstracts": "Constant"
+  },
+
+  // vim extension
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-b>": false,
+    "<C-n>": true,
+    "<C-p>": false
+  },
+
+  // To improve performance vim
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+
+  // exclude file in root adnan mugu
+  "files.exclude": {
+    "**/*.DAT": true,
+    "**/*.dat.LOG1": true,
+    "**/*.dat.LOG2": true,
+    "**/*.ini": true,
+    "**/*.TM.blf": true,
+    "**/*.regtrans-ms": true,
+    "**/Start Menu": true,
+    "**/NetHood": true,
+    "**/Saved Games": true,
+    "**/SendTo": true,
+    "**/Local Settings": true,
+    "**/Links": true,
+    "**/Favorites": true,
+    "**/My Documents": true,
+    "**/Cookies": true,
+    "**/Application Data": true,
+    "**/3D Objects": true,
+    "**/AppData": true,
+    "**/Desktop": true,
+    "**/Contacts": true,
+    "**/OneDrive": true,
+    "**/Searches": true,
+    "**/PrintHood": true,
+    "**/Templates": true,
+    "**/.vscode": true,
+    "**/IntelGraphicsProfiles": true,
+    "**/Recent": true
+  },
+
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml",
+    "editor.tabSize": 2
+  },
+  "workbench.colorTheme": "Atom One Dark"
+}
