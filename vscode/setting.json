@@ -16,7 +16,7 @@
   "editor.wordWrap": "bounded",
   "editor.fontSize": 11.5,
   "editor.letterSpacing": 0.2,
-  "editor.acceptSuggestionOnEnter": "off",
+  "editor.acceptSuggestionOnEnter": "smart",
   "editor.lineHeight": 1.5,
   "editor.fontWeight": 400,
   "editor.fontLigatures": false,
@@ -24,6 +24,7 @@
   "terminal.integrated.fontSize": 12.5,
   "terminal.integrated.fontWeight": 400,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
+
   "emojisense.languages": {
     "javascript": true,
     "markdown": true,
@@ -125,5 +126,7 @@
     "editor.defaultFormatter": "DotJoshJohnson.xml",
     "editor.tabSize": 2
   },
-  "workbench.colorTheme": "Atom One Dark"
+  "workbench.colorTheme": "Atom One Dark",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.stickyScroll.enabled": false
 }
