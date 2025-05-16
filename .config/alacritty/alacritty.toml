@@ -1,0 +1,19 @@
+[window]
+padding = { x = 110, y = 110 }
+
+[font]
+normal = { family = "JetBrains Mono", style = "Bold" }
+italic = { family = "JetBrains Mono", style = "Italic" }
+bold = { family = "JetBrains Mono", style = "Bold" }
+size = 9.50
+
+[cursor]
+style = { shape = "Underline", blinking = "On" }
+vi_mode_style = { shape = "Underline", blinking = "On" }
+blink_interval = 500
+blink_timeout = 5
+unfocused_hollow = true
+thickness = 0.60
+
+[general]
+import = ["~/.config/alacritty/gruvbox_dark.toml"]
