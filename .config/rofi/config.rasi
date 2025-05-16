@@ -1,0 +1,232 @@
+configuration {
+    modi:                        "drun,filebrowser,window,run";
+    show-icons:                  true;
+    display-drun:                " ";
+    display-run:                 " ";
+    display-filebrowser:         " ";
+    display-window:              " ";
+    drun-display-format:         "{name}";
+    window-format:               "{w}{t}";
+    font:                        "JetBrainsMono Nerd Font 10";
+}
+
+* {
+    font:                        "JetBrains Mono Nerd Font 10"; 
+    text-weight:                 bold;
+    background:                  #282828;
+    background-alt:              #3c3836;
+    foreground:                  #ebdbb2;
+    selected:                    #98971a;
+    active:                      #b8bb26;
+    urgent:                      #934A1C;
+
+    // GRUVBOX COLOR
+    /* Dark Background */
+    gb-dm-bg0: #282828;
+    gb-dm-bg0-hard: #1d2021;
+    gb-dm-bg0-soft: #32302f;
+    gb-dm-bg1: #3c3836;
+    gb-dm-bg2: #504945;
+    gb-dm-bg3: #665c54;
+    gb-dm-bg4: #7c6f64;
+
+    /* Dark Foreground */
+    gb-dm-fg0: #fbf1c7;
+    gb-dm-fg1: #ebdbb2;
+    gb-dm-fg2: #d5c4a1;
+    gb-dm-fg3: #bdae93;
+    gb-dm-fg4: #a89984;
+
+    /* Dark Colors */
+    gb-dm-dark-red: #cc241d;
+    gb-dm-dark-green: #98971a;
+    gb-dm-dark-yellow: #d79921;
+    gb-dm-dark-blue: #458588;
+    gb-dm-dark-purple: #b16286;
+    gb-dm-dark-aqua: #689d6a;
+    gb-dm-dark-orange: #d65d0e;
+    gb-dm-dark-gray: #928374;
+
+    gb-dm-light-red: #fb4934;
+    gb-dm-light-green: #b8bb26;
+    gb-dm-light-yellow: #fabd2f;
+    gb-dm-light-blue: #83a598;
+    gb-dm-light-purple: #d3869b;
+    gb-dm-light-aqua: #8ec07c;
+    gb-dm-light-orange: #f38019;
+    gb-dm-light-gray: #a89984;
+
+}
+
+// WINDOW 
+window {
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       48em;
+    height:                      20em;
+    padding:                     15px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    background-color:            @background;
+    border-radius:               18px;
+    border:                      2px;
+    border-color:                @background-alt;
+    enabled:                     true; /* windows widget props*/
+    cursor:                      "default";
+}
+
+// MAINBOX //
+mainbox {
+    enabled:                     true;
+    spacing:                     15px;
+    padding:                     0px;
+    background-color:            @gb-dm-bg0;
+    orientation:                 horizontal;
+    children:                    ["dummy", "listbox"];
+}
+
+dummy {
+    spacing:                     0px;
+    padding:                     0px;
+    width:                       30em;
+    expand:                      false;
+    border-radius:               8px;
+    orientation:                 horizontal;
+    background-color:            transparent;
+    background-image:            url("~/Downloads/114133447_p0.png", height);
+    children:                    ["mode-switcher"];
+}
+
+
+listbox {
+    spacing:                     15px;
+    padding:                     0px;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listview"];
+}
+
+// MODES //
+mode-switcher {
+    orientation:                 vertical;
+    enabled:                     true;
+    width:                       2.8em;
+    padding:                     5em 0.5em 5em 0.7em;
+    spacing:                     0.5em;
+    background-color:            transparent;
+    background-image:            url("~/Downloads/114133447_p0.png", height);
+}
+button {
+    cursor:                      pointer;
+    border-radius:               8px;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+button selected {
+    background-color:            @selected;
+    text-color:                  @background;
+}
+
+
+// INPUTBAR
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "search...";
+    placeholder-color:           inherit;
+    border-color: inherit;
+}
+inputbar {
+    enabled:                     true;
+    padding:                     13px;
+    border-radius:               12px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    children:                   ["entry"]; 
+}
+
+
+
+// LIST
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       false;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color: white;
+    cursor:                      "default";
+    // this border hide annoyoing dash dotted line
+    border:                      0px 0px 0px 0px;
+}
+
+// ELEMENT
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     10px;
+    border-radius:               12px;
+    cursor:                      pointer;
+    background-color: inherit;
+}
+
+/* fix bug list zebra horse */
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element alternate.normal {
+   background-color:             inherit;
+   text-color:                   inherit;
+}
+
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element normal.urgent {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element normal.active {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+/* selected color active */
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}
+element selected.urgent {
+    background-color:            @urgent;
+    text-color:                  @foreground;
+}
+element selected.active {
+    background-color:            @urgent;
+    text-color:                  @background;
+}
+
+
+element-icon {
+    size:                        24px;
+}
+element-text {
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+// MODE SWITCHER
+
