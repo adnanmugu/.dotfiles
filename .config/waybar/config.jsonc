@@ -1,0 +1,212 @@
+{
+  "layer": "top", 
+  "position": "top", "height": 12,
+  "spacing": 3, // Gaps between modules in px
+  "modules-left": [
+    "custom/archicon",
+    "cpu",
+    "network",
+    "mpris"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "idle_inhibitor",
+    "load",
+    "wireplumber",
+    "backlight",
+    "clock",
+    "battery",
+    "tray"
+  ],
+
+  // LEFT
+  "custom/archicon": {
+    "format": " "
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "󰍛 {usage}%",
+    "rotate": 0,
+    "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+  },
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "{bandwidthDownBytes}  ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗 ",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗 ",
+    "tooltip-format-wifi": "{essid} {signalStrength}%  ",
+    "tooltip-format-ethernet": "{ifname}  ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "mpris": {
+    "format": " {status_icon}  {title:.15}…",
+    "interval": 1,
+    "dynamic-len": 40,
+    "status-icons": {
+      "playing": "▶",
+      "paused": "⏸",
+      "stopped": ""
+    },
+    "dynamic-order": [
+      "title",
+      "artist"
+    ],
+    "ignored-players": [
+    ]
+  },
+
+  // CENTER
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十",
+      "active": "オン"
+    }
+  },
+
+  // RIGHT
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": " ",
+      "deactivated": " "
+    }
+  },
+  "load": {
+    "format": " {}"
+  },
+  "wireplumber": {
+    "scroll-step": 5, // %, can be a float
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}% ",
+    "format-bluetooth-muted": " {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "clock": {
+    // "timezone": "America/New_York",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>", "format-alt": "{:%Y-%m-%d}"
+  },
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10
+  }
+  
+  // DISABLED & OTHER FORMAT
+
+  // "cpu": {
+  //   "format": "{usage}%  ",
+  //   "tooltip": false
+  // },
+
+  // "memory": {
+  //   "format": "{}% "
+  // },
+
+  // "temperature": {
+  //   "thermal-zone": 2,
+  //   "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+  //   "critical-threshold": 80,
+  //   "format-critical": "{temperatureC}°C {icon}",
+  //   "format": "{temperatureC}°C {icon}",
+  //   "format-icons": [
+  //     "",
+  //     "",
+  //     ""
+  //   ]
+  // },
+
+  // "cava": {
+  //   //"cava_config": "$XDG_CONFIG_HOME/.config/cava/cava.conf",
+  //   "framerate": 30,
+  //   "autosens": 1,
+  //   "bars": 10,
+  //   "lower_cutoff_freq": 10,
+  //   "higher_cutoff_freq": 10000,
+  //   "method": "pipewire",
+  //   "source": "auto",
+  //   "stereo": true,
+  //   "bar_delimiter": 0,
+  //   "noise_reduction": 0.77,
+  //   "input_delay": 2,
+  //   "hide_on_silence": true,
+  //   "format-icons": [
+  //     "▁",
+  //     "▂",
+  //     "▃",
+  //     "▄",
+  //     "▅",
+  //     "▆",
+  //     "▇",
+  //     "█"
+  //   ],
+  //   "actions": {
+  //     "on-click-right": "mode"
+  //   }
+  // },
+}
