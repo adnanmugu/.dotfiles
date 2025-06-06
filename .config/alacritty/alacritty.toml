@@ -1,5 +1,5 @@
 [window]
-padding = { x = 1110, y = 1110 }
+padding = { x = 10, y = 10 }
 
 [font]
 normal = { family = "JetBrains Mono", style = "Bold" }
