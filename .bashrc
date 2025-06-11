@@ -85,3 +85,6 @@ nvim() {
 
 # Reload bashrc without restarting terminal
 alias reload="source ~/.bashrc"
+
+# manpath
+export MANPATH="$HOME/.local/share/man:$MANPATH"
