@@ -1,5 +1,7 @@
 [window]
-padding = { x = 10, y = 10 }
+padding = { x = 10, y = 5 }
+dynamic_padding = true
+decorations = "None"
 
 [font]
 normal = { family = "JetBrains Mono", style = "Bold" }
@@ -17,3 +19,4 @@ thickness = 0.60
 
 [general]
 import = ["~/.config/alacritty/gruvbox_dark.toml"]
+live_config_reload = true

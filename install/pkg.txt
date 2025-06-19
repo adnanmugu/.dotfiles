@@ -1,0 +1,41 @@
+# system
+brightnessctl
+bluez-utils
+bluez
+htop
+man-db
+github-cli
+git
+openssh
+base-devel
+mesa
+mesa-utils
+mesa-demos
+
+fastfetch
+
+# language
+npm
+nodejs
+python3
+
+# compressed 
+tar
+7zip
+unzip
+
+# terminal app
+tmux
+kitty
+alacritty
+
+# text editor
+neovim
+
+# display manager
+hyprland
+hyrpidle
+hyprpaper
+hyprlock
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-wlr
